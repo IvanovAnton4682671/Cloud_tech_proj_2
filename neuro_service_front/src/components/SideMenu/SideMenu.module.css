@@ -1,0 +1,53 @@
+.elemMenu {
+  border-radius: 10px;
+  border: 2px solid #000000;
+  background: none;
+  color: #000000;
+  padding: 10px;
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    animation: moveRight 0.3s forwards;
+  }
+
+  &:not(:hover) {
+    animation: moveLeft 0.3s forwards;
+  }
+}
+
+.selected {
+  background: #000000;
+  color: #ffffff;
+}
+
+@keyframes moveRight {
+  0% {
+    border: 2px solid #000000;
+    transform: translateX(0px);
+  }
+
+  100% {
+    border: 2px solid #3d3d3d;
+    background: #3d3d3d;
+    color: #ffffff;
+    transform: translateX(10px);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    border: 2px solid #3d3d3d;
+    background: #3d3d3d;
+    color: #ffffff;
+    transform: translateX(10px);
+  }
+
+  100% {
+    border: 2px solid #000000;
+    transform: translateX(0px);
+  }
+}
